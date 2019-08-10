@@ -48,3 +48,49 @@ header ul li a:hover{
     border-bottom: #b5a263 solid 2px;
     transition: 0.3s;
 }
+.background {
+    background-image: url("../images/background.png");
+    padding-top: 70px;
+    padding-bottom: 85px;
+}
+
+.background h1 {
+    font-size: 32px;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 19px;
+}
+.background p {
+    font-size: 11px;
+    color: white;
+}
+
+.content {
+    max-width: 888px;
+    margin: auto;
+}
+
+.content h2 {
+    font-size: 19px;
+    color: #24282f;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 122px;
+    padding-bottom: 22px;
+}
+
+.content h2:after {
+    content: "";
+    width: 61px;
+    background-color: #b5a263;
+    height: 3px;
+    display: block;
+    margin: auto;
+    margin-top: 22px;
+}
+
+.content:after {
+    content: "";
+    clear: both;
+    display: block;
+}
