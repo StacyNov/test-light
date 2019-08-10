@@ -89,8 +89,38 @@ header ul li a:hover{
     margin-top: 22px;
 }
 
+
+
+.user {
+    float: left;
+    margin-right: 75px;
+}
+
+.user:last-of-type {
+    margin-right: 0;
+}
 .content:after {
     content: "";
     clear: both;
     display: block;
+}
+
+.user div {
+    font-size: 12px;
+    color: #24282f;
+}
+
+.user div span {
+    font-size: 11px;
+    color: #b5a263;
+    display: block;
+}
+
+.user div a i {
+    font-size: 13px;
+    color: #dedede;
+    position: relative;
+    top: -20px;
+    float: right;
+    margin-right: 7px;
 }
