@@ -66,9 +66,8 @@ header ul li a:hover{
 }
 
 .content {
-    max-width: 888px;
+    max-width: 890px;
     margin: auto;
-    margin-bottom: 35px;
 }
 
 .content h2 {
@@ -167,6 +166,7 @@ header ul li a:hover{
     text-align: center;
     font-size: 11px;
     color: #000000;
+    padding-bottom: 40px;
 }
 
 .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled{
@@ -203,3 +203,109 @@ header ul li a:hover{
     font-size: 13px;
     margin-bottom: 25px;
 }
+
+footer {
+    background-color: #24282f;
+    padding-bottom: 24px;
+}
+
+footer .border {
+    background-color: #2b2f35;
+    padding-top: 60px;
+    padding-bottom: 50px;
+    border-bottom: #6e7279 1px solid;
+}
+
+
+.section {
+    max-width: 240px;
+    height: 100%;
+    float: left;
+    margin-right: 90px;
+    padding-bottom: 28px;}
+
+.section:last-of-type {
+    float: right;
+}
+
+footer .content .section h4 {
+    font-size: 14px;
+    color: #b5a263;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+
+}
+
+footer .content .section p {
+    font-size: 11px;
+    color: #6e7279;
+    padding-bottom: 22px;
+}
+
+.email {
+    border: #6e7279 1px solid;
+    background-color: #2b2f35;
+    font-size: 11px;
+    height: 30px;
+    max-width: 229px;
+    width: 100%;
+    padding-left: 9px;
+    margin-bottom: 8px;
+}
+
+.submit {
+    box-sizing: border-box;
+    border: none;
+    background-color: #b5a263;
+    font-size: 11px;
+    text-transform: uppercase;
+    height: 30px;
+    max-width: 240px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+.last_section{
+    display: inline-block;
+}
+
+.last_section p {
+    float: left;
+    font-size: 10px;
+    color: #6e7279;
+    padding-top: 25px;
+}
+
+.social {
+    float: right;
+}
+
+.last_section {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.social:before {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.social a i {
+    font-size: 13px;
+    color: #6e7279;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.social:last-of-type {
+    margin-right: 0;
+}
+
+.social a i:hover {
+    color: #b5a263;
+
+}
+
