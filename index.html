@@ -8,17 +8,44 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://resources/demos/style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css">
+    <script src="js/script.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script
             src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $("#opener").on("click", function () {
+                $("#dialog").dialog("open");
+            });
+        });
+    </script>
+
 </head>
 <body>
+
 <header>
     <div class=container>
         <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
@@ -75,64 +102,76 @@
         </div>
     </div>
 </section>
-<div>
-    <a href="#" class="button">Show all</a>
-</div>
+<form>
+    <div id="dialog" title="FORGOT YOUR PASSWORD?">
+        <p> Enter<br> Your <br> Email </p> <input class="email_2" type="email" size="20" placeholder="">
+        <a href="#" class="password"/>reset password</a>
+        <p class="p">or</p>
+        <a href="#" class="facebook"/><i class="fab fa-facebook-f"></i> log in using facebook </a>
+    </div>
+    <button id="opener" content="show all">Show all</button>
+</form>
 <section>
     <div class="container" style="position: relative">
         <div class="owl-carousel">
-            <div><h3> WHAT OUR CLIENTS SAY </h3>
+            <div>
+                <h3> WHAT OUR CLIENTS SAY </h3>
                 <img src="images/photo.png" alt="">
                 <p>Praesent tincidunt molestie libero mollis porta. Faucibus leo, ac aliquet magna. Vivamus ullamcorper
                     mollis leo, at sagittis mi pellentesque quis. Praesent nec elit tristique.</p>
                 <h4> Larry Jane </h4>
-                <h5>General Manager</h5></div>
-            <div><h3> WHAT OUR CLIENTS SAY </h3>
+                <h5>General Manager</h5>
+                </div>
+            <div>
+                <h3> WHAT OUR CLIENTS SAY </h3>
                 <img src="images/photo.png" alt="">
                 <p>Praesent tincidunt molestie libero mollis porta. Faucibus leo, ac aliquet magna. Vivamus ullamcorper
                     mollis leo, at sagittis mi pellentesque quis. Praesent nec elit tristique.</p>
                 <h4> Larry Jane </h4>
-                <h5>General Manager</h5></div>
-            <div><h3> WHAT OUR CLIENTS SAY </h3>
+                <h5>General Manager</h5>
+                </div>
+            <div>
+                <h3> WHAT OUR CLIENTS SAY </h3>
                 <img src="images/photo.png" alt="">
                 <p>Praesent tincidunt molestie libero mollis porta. Faucibus leo, ac aliquet magna. Vivamus ullamcorper
                     mollis leo, at sagittis mi pellentesque quis. Praesent nec elit tristique.</p>
                 <h4> Larry Jane </h4>
-                <h5>General Manager</h5></div>
+                <h5>General Manager</h5>
+            </div>
         </div>
     </div>
 </section>
 <footer>
     <div class="border">
         <section class="content">
-        <div class="section">
-            <h4>ABOUT FAPOR</h4>
-            <p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with
-                clients to fulfil their design needs. Whether you need to create a brand from scratch, including
-                marketing materials and a beautiful.</p>
+            <div class="section">
+                <h4>ABOUT FAPOR</h4>
+                <p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with
+                    clients to fulfil their design needs. Whether you need to create a brand from scratch, including
+                    marketing materials and a beautiful.</p>
 
-        </div>
-        <div class="section">
-            <h4>Contact INFO</h4>
-            <p>PO Box 17122 Nollins Street<br>
-                5034 Los Angelos</p>
-            <p> Phone: 1800555.0658<br>
-                Email: support@fapor.com<br>
-                Web: fapor.com</p>
-        </div>
-        <div class="section">
-            <h4>Subscribe to our newsletter</h4>
-            <form action="">
-                <input class="email" name="" required type="email" placeholder="Enter your email address">
-                <input class="submit" type="submit" value="SUBSCRIBE NOW">
-            </form>
-        </div>
+            </div>
+            <div class="section">
+                <h4>Contact INFO</h4>
+                <p>PO Box 17122 Nollins Street<br>
+                    5034 Los Angelos</p>
+                <p> Phone: 1800555.0658<br>
+                    Email: support@fapor.com<br>
+                    Web: fapor.com</p>
+            </div>
+            <div class="section">
+                <h4>Subscribe to our newsletter</h4>
+                <form action="">
+                    <input class="email" required type="email" placeholder="Enter your email address">
+                    <input class="submit" type="submit" value="SUBSCRIBE NOW">
+                </form>
+            </div>
         </section>
     </div>
     <section class="content">
         <section class="last_section">
             <div>
-                <p>© 2016  Fapor by Respotheme</p>
+                <p>© 2016 Fapor by Respotheme</p>
             </div>
             <div class="social">
                 <a href="#"> <i class="fab fa-facebook"></i></a>
@@ -145,6 +184,5 @@
     </section>
 
 </footer>
-
 </body>
 </html>

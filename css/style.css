@@ -1,3 +1,50 @@
+@font-face {
+    font-family: 'RalewayBold';
+    src: url('../fonts/RalewayBold.eot');
+    src: url('../fonts/RalewayBold.eot') format('embedded-opentype'),
+    url('../fonts/RalewayBold.woff2') format('woff2'),
+    url('../fonts/RalewayBold.woff') format('woff'),
+    url('../fonts/RalewayBold.ttf') format('truetype'),
+    url('../fonts/RalewayBold.svg#RalewayBold') format('svg');
+}
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../fonts/OpenSansRegular.eot');
+    src: url('../fonts/OpenSansRegular.eot') format('embedded-opentype'),
+    url('../fonts/OpenSansRegular.woff2') format('woff2'),
+    url('../fonts/OpenSansRegular.woff') format('woff'),
+    url('../fonts/OpenSansRegular.ttf') format('truetype'),
+    url('../fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+}
+@font-face {
+    font-family: 'RalewaySemiBold';
+    src: url('../fonts/RalewaySemiBold.eot');
+    src: url('../fonts/RalewaySemiBold.eot') format('embedded-opentype'),
+    url('../fonts/RalewaySemiBold.woff2') format('woff2'),
+    url('../fonts/RalewaySemiBold.woff') format('woff'),
+    url('../fonts/RalewaySemiBold.ttf') format('truetype'),
+    url('../fonts/RalewaySemiBold.svg#RalewaySemiBold') format('svg');
+}
+@font-face {
+    font-family: 'RalewayMedium';
+    src: url('../fonts/RalewayMedium.eot');
+    src: url('../fonts/RalewayMedium.eot') format('embedded-opentype'),
+    url('../fonts/RalewayMedium.woff2') format('woff2'),
+    url('../fonts/RalewayMedium.woff') format('woff'),
+    url('../fonts/RalewayMedium.ttf') format('truetype'),
+    url('../fonts/RalewayMedium.svg#RalewayMedium') format('svg');
+}
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('../fonts/OpenSansSemibold.eot');
+    src: url('../fonts/OpenSansSemibold.eot') format('embedded-opentype'),
+    url('../fonts/OpenSansSemibold.woff2') format('woff2'),
+    url('../fonts/OpenSansSemibold.woff') format('woff'),
+    url('../fonts/OpenSansSemibold.ttf') format('truetype'),
+    url('../fonts/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,34 +53,37 @@
     -webkit-font-smoothing: antialiased;
 }
 
-header{
+header {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #24282f;
 }
 
-.container{
+.container {
     max-width: 1094px;
     margin: auto;
 }
 
-.logo{
+.logo {
     float: left;
 }
-.container:after{
+
+.container:after {
     content: "";
     display: block;
     clear: both;
 }
+
 header ul {
     float: right;
 }
-header ul li{
+
+header ul li {
     display: inline-block;
     margin-left: 52px;
 }
 
-header ul li a{
+header ul li a {
     color: #d8d9da;
     text-decoration: none;
     text-transform: uppercase;
@@ -44,10 +94,11 @@ header ul li a{
     padding-left: 10px;
 }
 
-header ul li a:hover{
+header ul li a:hover {
     border-bottom: #b5a263 solid 2px;
     transition: 0.3s;
 }
+
 .background {
     background-image: url("../images/background.png");
     padding-top: 70px;
@@ -59,10 +110,13 @@ header ul li a:hover{
     color: white;
     text-transform: uppercase;
     padding-bottom: 19px;
+    font-family: 'RalewayBold';
 }
+
 .background p {
     font-size: 11px;
     color: white;
+    font-family: 'OpenSansRegular';
 }
 
 .content {
@@ -77,6 +131,7 @@ header ul li a:hover{
     text-align: center;
     margin-top: 122px;
     padding-bottom: 22px;
+    font-family: 'RalewaySemiBold';
 }
 
 .content h2:after {
@@ -90,7 +145,6 @@ header ul li a:hover{
 }
 
 
-
 .user {
     float: left;
     margin-right: 75px;
@@ -99,6 +153,7 @@ header ul li a:hover{
 .user:last-of-type {
     margin-right: 0;
 }
+
 .content:after {
     content: "";
     clear: both;
@@ -108,12 +163,14 @@ header ul li a:hover{
 .user div {
     font-size: 12px;
     color: #24282f;
+    font-family: 'RalewayMedium';
 }
 
 .user div span {
     font-size: 11px;
     color: #b5a263;
     display: block;
+    font-family: 'OpenSansRegular';
 }
 
 .user div a i {
@@ -131,6 +188,7 @@ header ul li a:hover{
     color: #24282f;
     padding-bottom: 21px;
 }
+
 .container .owl-carousel h3:after {
     content: "";
     width: 61px;
@@ -149,13 +207,15 @@ header ul li a:hover{
     margin: auto;
     padding-bottom: 36px;
 }
-.owl-carousel .owl-item img{
+
+.owl-carousel .owl-item img {
     width: auto;
     display: block;
     margin: auto;
     padding-top: 50px;
     padding-bottom: 30px;
 }
+
 .owl-carousel div h4 {
     font-size: 13px;
     color: #b5a263;
@@ -169,9 +229,10 @@ header ul li a:hover{
     padding-bottom: 40px;
 }
 
-.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled{
+.owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
     display: block;
 }
+
 .owl-carousel .owl-nav button.owl-prev {
     position: absolute;
     left: 0;
@@ -186,8 +247,9 @@ header ul li a:hover{
 }
 
 
-.button {
+form button {
     margin: auto;
+    background-color: white;
     color: #24282f;
     text-transform: uppercase;
     border: #24282f 1px solid;
@@ -195,13 +257,13 @@ header ul li a:hover{
     outline: none;
     text-decoration: none;
     user-select: none;
-    display: block;
     text-align: center;
-    height: 20px;
-    width: 70px;
     padding: 15px 30px;
     font-size: 13px;
-    margin-bottom: 25px;
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    cursor: pointer;
 }
 
 footer {
@@ -221,8 +283,9 @@ footer .border {
     max-width: 240px;
     height: 100%;
     float: left;
-    margin-right: 90px;
-    padding-bottom: 28px;}
+    margin-right: 70px;
+    padding-bottom: 28px;
+}
 
 .section:last-of-type {
     float: right;
@@ -233,6 +296,7 @@ footer .content .section h4 {
     color: #b5a263;
     padding-bottom: 25px;
     text-transform: uppercase;
+    font-family: 'OpenSansSemibold';
 
 }
 
@@ -240,6 +304,7 @@ footer .content .section p {
     font-size: 11px;
     color: #6e7279;
     padding-bottom: 22px;
+    font-family: 'OpenSansRegular';
 }
 
 .email {
@@ -266,7 +331,7 @@ footer .content .section p {
     color: white;
 }
 
-.last_section{
+.last_section {
     display: inline-block;
 }
 
@@ -306,6 +371,52 @@ footer .content .section p {
 
 .social a i:hover {
     color: #b5a263;
-
 }
 
+#dialog .password {
+    display: block;
+    text-align: center;
+    border: none;
+    color: black;
+    background-color: #d2d2d2;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.p {
+    text-align: center;
+    font-size: 20px;
+}
+
+#dialog .facebook {
+    display: block;
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: #557acb;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.email_2 {
+    position: relative;
+    top: -39px;
+    left: 60px;
+}
+
+.ui-dialog .ui-dialog-title {
+    background-color: black;
+    color: white;
+
+}
+.ui-widget-header {
+    background-color: black;
+}
