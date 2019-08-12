@@ -13,16 +13,12 @@
     <link rel="stylesheet" href="fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-queries.css">
-    <script src="js/script.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/owl.carousel.js"></script>
     <script
             src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <script>
         $(function () {
             $("#dialog").dialog({
@@ -47,6 +43,19 @@
 <body>
 
 <header>
+    <div class="mobile overlay">
+        <nav class="overlayMenu">
+            <ul role="menu">
+                <li><a href="#" role="menuitem">home</a></li>
+                <li><a href="#" role="menuitem">about</a></li>
+                <li><a href="#" role="menuitem">service</a></li>
+                <li><a href="#" role="menuitem">portfolio</a></li>
+                <li><a href="#" role="menuitem">contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="navBurger" role="navigation" id="navToggle"></div>
     <div class=container>
         <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
         <ul>
@@ -67,7 +76,7 @@
             and a beautiful.</p>
     </div>
 </section>
-<section class="content">
+<div class="content">
     <h2> Management </h2>
     <div class="user">
         <img src="images/user01.png" alt="user">
@@ -101,13 +110,15 @@
             <a href="#"> <i class="fab fa-google-plus"></i></a>
         </div>
     </div>
-</section>
+</div>
 <form>
     <div id="dialog" title="FORGOT YOUR PASSWORD?">
         <p> Enter<br> Your <br> Email </p> <input class="email_2" type="email" size="20" placeholder="">
-        <a href="#" class="password"/>reset password</a>
-        <p class="p">or</p>
-        <a href="#" class="facebook"/><i class="fab fa-facebook-f"></i> log in using facebook </a>
+        <a href="#" class="password">reset password</a>
+        <p>or</p>
+        <a href="#" class="facebook">
+            <i class="fab fa-facebook-f"></i> log in using facebook
+            </a>
     </div>
     <button id="opener" content="show all">Show all</button>
 </form>
@@ -121,7 +132,7 @@
                     mollis leo, at sagittis mi pellentesque quis. Praesent nec elit tristique.</p>
                 <h4> Larry Jane </h4>
                 <h5>General Manager</h5>
-                </div>
+            </div>
             <div>
                 <h3> WHAT OUR CLIENTS SAY </h3>
                 <img src="images/photo.png" alt="">
@@ -129,7 +140,7 @@
                     mollis leo, at sagittis mi pellentesque quis. Praesent nec elit tristique.</p>
                 <h4> Larry Jane </h4>
                 <h5>General Manager</h5>
-                </div>
+            </div>
             <div>
                 <h3> WHAT OUR CLIENTS SAY </h3>
                 <img src="images/photo.png" alt="">
@@ -143,7 +154,7 @@
 </section>
 <footer>
     <div class="border">
-        <section class="content">
+        <div class="content">
             <div class="section">
                 <h4>ABOUT FAPOR</h4>
                 <p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with
@@ -166,10 +177,10 @@
                     <input class="submit" type="submit" value="SUBSCRIBE NOW">
                 </form>
             </div>
-        </section>
+        </div>
     </div>
-    <section class="content">
-        <section class="last_section">
+    <div class="content">
+        <div class="last_section">
             <div>
                 <p>© 2016 Fapor by Respotheme</p>
             </div>
@@ -179,10 +190,11 @@
                 <a href="#"> <i class="fab fa-google-plus"></i></a>
                 <a href="#"> <i class="fab fa-instagram"></i> </a>
             </div>
-        </section>
+        </div>
 
-    </section>
+    </div>
 
 </footer>
+<script src="js/script.js"></script>
 </body>
 </html>

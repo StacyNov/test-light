@@ -1,12 +1,16 @@
-/*@media screen and (min-width: 480px) and (max-width: 1200px){*/
+@media screen and (min-width: 320px) and (max-width: 1024px){
 
-/*}*/
+    header .container ul {
+        display: none;
+    }
 
+}
 
-
-
-
-
+@media only screen and (min-width: 1024px) {
+    .navBurger {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .container{
