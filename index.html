@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://resources/demos/style.css">
-    <link rel="stylesheet" href="fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media-queries.css">
     <script
@@ -38,61 +40,62 @@
             });
         });
     </script>
-
 </head>
 <body>
 
 <header>
-    <div class="mobile overlay">
-        <nav class="overlayMenu">
-            <ul role="menu">
-                <li><a href="#" role="menuitem">home</a></li>
-                <li><a href="#" role="menuitem">about</a></li>
-                <li><a href="#" role="menuitem">service</a></li>
-                <li><a href="#" role="menuitem">portfolio</a></li>
-                <li><a href="#" role="menuitem">contacts</a></li>
-            </ul>
-        </nav>
+    <div class="overlay">
+        <section class="section section--menu" id="Titania">
+            <nav class="overlayMenu menu menu--titania">
+                <ul class="menu__list" role="menu">
+                    <li class="menu__item menu__item--current"><a href="#" class="menu__link" role="menuitem">home</a></li>
+                    <li class="menu__item" ><a href="#" class="menu__link" role="menuitem">about</a></li>
+                    <li class="menu__item" ><a href="#" class="menu__link" role="menuitem">service</a></li>
+                    <li class="menu__item" ><a href="#" class="menu__link" role="menuitem">portfolio</a></li>
+                    <li class="menu__lines"></li>
+                </ul>
+            </nav>
+        </section>
     </div>
-
     <div class="navBurger" role="navigation" id="navToggle"></div>
-    <div class=container>
-        <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">service</a></li>
-            <li><a href="#">portfolio</a></li>
-            <li><a href="#">contacts</a></li>
-        </ul>
-    </div>
+        <div class=container>
+            <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">service</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">contacts</a></li>
+                </ul>
+            </div>
 </header>
 <section class="background">
     <div class=container>
         <h1> More About US </h1>
-        <p> We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients
+            <p> We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients
             to fulfil their <br> design needs. Whether you need to create a brand from scratch, including marketing
             materials
-            and a beautiful.</p>
+            and a beautiful.
+            </p>
     </div>
 </section>
-<div class="content">
-    <h2> Management </h2>
-    <div class="user">
-        <img src="images/user01.png" alt="user">
-        <div>Courteney Cox<span>Marketing Manager</span></div>
-        <div>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter-square"></i></a>
-            <a href="#"><i class="fab fa-google-plus"></i></a>
-        </div>
+    <div class="content">
+        <h2> Management </h2>
+        <div class="user">
+            <img src="images/user01.png" alt="user">
+                <div>Courteney Cox<span>Marketing Manager</span></div>
+                    <div>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-google-plus"></i></a>
+                    </div>
 
-    </div>
-    <div class="user">
-        <img src="images/user02.png" alt="user">
-        <div>Matt LeBlanc
-            <span>Finance Manager</span>
         </div>
+            <div class="user">
+                <img src="images/user02.png" alt="user">
+                    <div>Matt LeBlanc
+                        <span>Finance Manager</span>
+            </div>
         <div>
             <a href="#"> <i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter-square"></i></a>
@@ -101,9 +104,9 @@
     </div>
     <div class="user">
         <img src="images/user03.png" alt="user">
-        <div>David Schwimmer
-            <span>Creative Director</span>
-        </div>
+            <div>David Schwimmer
+                <span>Creative Director</span>
+            </div>
         <div>
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter-square"></i></a>
@@ -195,6 +198,44 @@
     </div>
 
 </footer>
+
+<script src="js/classie.js"></script>
+<script src="js/clipboard.min.js"></script>
 <script src="js/script.js"></script>
+
+<script>
+    (function() {
+        [].slice.call(document.querySelectorAll('.menu')).forEach(function(menu) {
+            var menuItems = menu.querySelectorAll('.menu__link'),
+                setCurrent = function(ev) {
+                    ev.preventDefault();
+                    var item = ev.target.parentNode; // li
+                    // return if already current
+                    if (classie.has(item, 'menu__item--current')) {
+                        return false;
+                    }
+                    // remove current
+                    classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                    // set current
+                    classie.add(item, 'menu__item--current');
+                };
+            [].slice.call(menuItems).forEach(function(el) {
+                el.addEventListener('click', setCurrent);
+            });
+        });
+        [].slice.call(document.querySelectorAll('.link-copy')).forEach(function(link) {
+            link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+            new Clipboard(link);
+            link.addEventListener('click', function() {
+                classie.add(link, 'link-copy--animate');
+                setTimeout(function() {
+                    classie.remove(link, 'link-copy--animate');
+                }, 300);
+            });
+        });
+    })(window);
+</script>
+
+
 </body>
 </html>
