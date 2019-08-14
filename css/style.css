@@ -64,14 +64,14 @@ header {
     margin: auto;
 }
 
-@keyframes pulsing {
-    0%  { transform: scale(0.5) }
-    100% { transform: scale(1) }
+@keyframes rotating {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .logo {
     float: left;
-    animation: pulsing 0.5s cubic-bezier(0.1,0.25,0.1,1) 2s infinite alternate both;
+    animation: rotating 4s linear forwards;
 }
 
 .container:after {
@@ -111,11 +111,24 @@ header ul li a:hover {
     padding-bottom: 85px;
 }
 
-@keyframes line {
-    0%  { margin-left: 0px; }
-    /*50% {margin-left: 400px; }*/
-    100% {margin-left: 800px}
+@keyframes slide {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    }
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
+    80% {
+        transform: translateY(0);
+        opacity: 1;
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    }
 }
+
 
 .background h1 {
     font-size: 32px;
@@ -123,13 +136,25 @@ header ul li a:hover {
     text-transform: uppercase;
     padding-bottom: 19px;
     font-family: 'RalewayBold';
-    animation: line 5s infinite;
+    animation: slide 5s forwards;
+
+
 }
 
+@keyframes line {
+    0% {
+        margin-left: 0px;
+    }
+    /*50% {margin-left: 400px; }*/
+    100% {
+        margin-left: 500px
+    }
+}
 .background p {
     font-size: 11px;
     color: white;
     font-family: 'OpenSansRegular';
+    animation: line 3s forwards;
 }
 
 .content {
